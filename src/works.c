@@ -13,9 +13,11 @@ int p(int x){
     if (worklog > x){
       return 0;
     }
-    if ((worklog+A[j+1]) > x){
-      human = human + 1;
-      worklog = 0;
+    if (j!=n-1){
+      if ((worklog+A[j+1]) > x){
+        human = human + 1;
+        worklog = 0;
+      }
     }
   }
   return human <= k;
